@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CostItem/CostItem.scss'
+import './CostItem.scss'
 
 const CostItem = (props) => {
 
