@@ -1,0 +1,30 @@
+@import './reset.scss';
+@import '../components/CostItem/CostItem.scss';
+h1,h2,h3, p,label{
+    color: #E6E6FA;;
+}
+@mixin box-style{
+    height: $box-height;
+    width: 100px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: #00179b;
+}
+$box-height : 100px;
+.box{
+    @include box-style();
+
+    & span{
+        height: $box-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+    }
+}
+.costs{
+    background-color: #3b53dd7c;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
