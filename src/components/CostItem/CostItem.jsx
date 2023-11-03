@@ -20,15 +20,23 @@ const costs = [
       amount: '$ 500.00',
   },
   
+  
 ]
 const CostItem = () => {
 
   return (
     <>
       {costs.map((cost)=>{
+        const month = cost.data.toLocaleString('ru-RU',{month: 'long'})
+        const year = cost.data.getFullYear()
+        const day = cost.data.toLocaleString('ru-RU', {day: '2-digit'})
         return(
           <div className='cost-item' key={cost.id}>
-          <div className='cost-data'><label htmlFor="data">{cost.data.toDateString()}</label></div>
+          <div className='cost-data'>
+            <div>{month}</div>
+            <div>{year}</div>
+            <div className='day'>{day}</div>
+          </div>
           <div className='cost-info'>
           <label className='cost-price'htmlFor="price">{cost.amount}</label>
           <label  htmlFor="element">{cost.description}</label>
