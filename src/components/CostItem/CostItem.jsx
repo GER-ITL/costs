@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CostItem.scss'
 const costs = [
   {
@@ -21,16 +21,26 @@ const costs = [
   },
   
   
+  
 ]
-const CostItem = () => {
-
+const CostItem = (cost) => {
+  const[description, setDescription] = useState(cost.description)
+  const changeCost = ()=>{
+    setDescription('New Cost')
+    console.log(description)
+  }
   return (
     <>
+     <div className='outBox'>
+      
       {costs.map((cost)=>{
         const month = cost.data.toLocaleString('ru-RU',{month: 'long'})
         const year = cost.data.getFullYear()
         const day = cost.data.toLocaleString('ru-RU', {day: '2-digit'})
+     
         return(
+         
+
           <div className='cost-item' key={cost.id}>
           <div className='cost-data'>
             <div>{month}</div>
@@ -41,10 +51,12 @@ const CostItem = () => {
           <label className='cost-price'htmlFor="price">{cost.amount}</label>
           <label  htmlFor="element">{cost.description}</label>
           </div>
-          <button>Change cost</button>
+          <button onClick={changeCost}>Change cost</button>
         </div>
+        
         )
       })}
+     </div>
 
     </>
 

@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+.outBox{
+    background: rgba(0, 58, 139, 0.69);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
 label{
     text-align: center;
 }
@@ -8,10 +14,31 @@ label{
     padding: 10px;
     margin: 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0px 0px 10px #262626;
-    
+    & button{
+        border: 1px solid #E6E6FA;
+        outline: none;
+        cursor: pointer;
+        height: 50px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        background: rgba(0, 58, 139, 0.69);
+        color: #E6E6FA;
+        transition: 0.5s all;
+        
+    }
+    button:hover{
+       
+        box-shadow:  inset 1px 1px 10px #E6E6FA;
+    }
+    & label{
+        margin-top: 10px;
+        font-size: 20px;
+    }
 
 }
 $color-bg: rgba(0, 58, 139, 0.69);

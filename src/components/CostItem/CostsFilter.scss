@@ -1,0 +1,17 @@
+@import '../CostItem/CostItem.scss';
+.costs-filter_control{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+    & select{
+        background: #e6e6fa;
+        border: 2px solid rgba(0, 58, 139, 0.69);
+        font-size: 15px;
+        padding: 5px 30px;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        
+    }
+}

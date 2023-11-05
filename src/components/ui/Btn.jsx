@@ -2,7 +2,10 @@ import React from 'react'
 
 const Btn = () => {
   return (
-   <button>Click</button>
+    <>
+    <button >Change cost</button>
+
+    </>
   )
 }
 
